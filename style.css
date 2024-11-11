@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'PatchedBold1';  /* שם הגופן */
+    src: url('./fonts/PatchedBold1.otf') format('opentype');  /* נתיב הגופן */
+    font-weight: bold;  /* משקל הגופן */
+    font-style: normal;  /* סגנון רגיל */
+}
+
+@font-face {
+    font-family: 'PatchedBold2';  /* שם הגופן */
+    src: url('./fonts/PatchedBold2.otf') format('opentype');  /* נתיב הגופן */
+    font-style: normal;  /* סגנון רגיל */
+}
+
+body{
+    font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+    margin: 0;
+    background-color: #dbccad;
+    height: 1000px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+    font-size: 20px;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 15px;
+    background-color:#BE8D58;
+    border: #1D2C1E,solid,2px;
+    color: #1D2C1E;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* הצל */
+    transition: box-shadow 0.3s,transform 0.3s ease; /* אנימציות חלקות */; /* אנימציה רכה */
+}
+
+.gallery {
+    margin-top: 20px;
+    position: relative;
+    width: 300px; /* גובה הגלריה */
+    height: 200px; /* רוחב הגלריה */
+    overflow: hidden; /* למנוע מהתמונות לחרוג */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+.gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* למלא את האלמנט בלי לעוות את התמונה */
+    opacity: 0; /* להתחיל עם שקיפות */
+    transition: opacity 1s ease; /* אנימציה לשינוי שקיפות */
+}
+
+.gallery img.active {
+    opacity: 1; /* הפוך את התמונה הפעילה לגלויה */
+}
+
+#scroll-target {
+    font-family: 'PatchedBold2', sans-serif;  /* השתמש בגופן */
+    margin-top: 80px; /* מציב את האלמנט למטה כדי לראות את הגלילה */
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.number {
+    font-size: 12.5px;
+    position: relative;  /* חשוב להוסיף את זה */
+    top: 2.8px;  /* מיקום הספרות 2px למטה */
+}
+
+.number1 {
+    font-size: 20px;
+    position: relative;  /* חשוב להוסיף את זה */
+    top: 5px;  /* מיקום הספרות 2px למטה */
+}
+
+.number2 {
+    font-size: 17px;
+    position: relative;  /* חשוב להוסיף את זה */
+    top: 4px;  /* מיקום הספרות 2px למטה */
+}
+
+.number3 {
+  font-size: 12.5px;
+  position: relative;  /* חשוב להוסיף את זה */
+  top: 2.5px;  /* מיקום הספרות 2px למטה */
+}
+
+
+.button:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* צל חזק יותר בעת ריחוף */
+    transform: scale(1.1); /* הגדלת הכפתור בזמן ריחוף */
+}
+
+#description{
+    font-family: 'PatchedBold2', sans-serif;  /* השתמש בגופן */
+    margin-top: 10px;
+    margin-inline: 38px;
+}
+h3{
+    font-size: 13px;
+    line-height: 24px;
+    color: #894c15;
+}
+.whatsapp-button {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 27px;
+    background-color: #25d366;
+    padding: 7px;
+    padding-inline: 9px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .whatsapp-button img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1); /* הגדלת הכפתור במעט כשעוברים עליו */
+  }
+  
+  #clickToContinue{
+    margin-top: -25px;
+    margin-bottom: 300px;
+  }
+
+  #viewOurProducts{
+    margin-top: 10px;
+    background-color:#BE8D58;
+    border: #1D2C1E,solid,2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    top: 20px;        /* מרחק מלמעלה */
+    right: 20px;      /* מרחק מימין */
+    color: white;
+    font-size: 30px;   /* גודל הפונט */
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    display: none;  /* לא מוצג בהתחלה */
+    transition: transform 0.3s ease; /* אנימציות חלקות */
+  }
+  
+  .scroll-to-top:hover {
+    transform: scale(1.2); /* הגדלת הכפתור בזמן ריחוף */
+  }
+  
+  /* עיצוב הכללי */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* מאפשר למוצרים להסתדר בשורות */
+    justify-content: center; /* מרכז את הכרטיסים בתוך הקונטיינר */
+    gap: 0px; /* רווח בין הכרטיסים */
+    padding: 10px;
+  }
+  
+  .product-card {
+    width: 100%;  /* בכדי שהכרטיס יימתח לאורך המסך במובייל */
+    max-width: 300px;  /* הכרטיס לא יעמוד על יותר מ-300px */
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* מגביל את גובה התמונה */
+  }
+  
+  .product-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .product-title{
+    font-size: 0.8em;
+    color: #894c15;
+    margin: 10px 0;
+  }
+
+  .product-description {
+    font-size: 0.6em;
+    color: #666;
+    margin: 10px 0;
+    padding: 2px;
+  }
+  
+  .product-price {
+    font-size: 0.8em;
+    color: #28a745; 
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+
+  .old-price {
+    position: relative;
+    display: inline-block;
+    font-size: 13px; /* גודל טקסט מותאם */
+    color: #999; /* צבע חיוור למחיר הישן */
+  }
+  
+  .old-price::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* מיקום הקו באמצע טקסט המחיר */
+    left: 0;
+    width: 110%;
+    height: 2px; /* עובי הקו */
+    background-color: #999; /* צבע הקו */
+    transform: rotate(-25deg); /* סיבוב הקו אלכסונית */
+    transform-origin: 40% 40%; /* הגדרת הסיבוב בדיוק במרכז הקו */
+    z-index: 1; /* ודא שהקו נמצא מעל הטקסט */
+  }
+  
+  
+  .new-price {
+    font-size: 1.5em; /* גודל טקסט מותאם למחיר החדש */
+    color: #333; /* צבע המחיר החדש */
+    font-weight: bold;
+  }
+  
+  
+  .btn-buy {
+    display:none;
+    padding: 10px 0px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* עושה את כפתור "קנייה עכשיו" לרוחב מלא במובייל */
+  }
+  
+  .btn-buy:hover {
+    background-color: #0056b3;
+  }
+  
+  /* מדיה קווריז - עיצוב למובייל */
+  @media only screen and (max-width: 768px) {
+    .product-container {
+      justify-content: center; /* מרכז את המוצרים */
+      padding: 5px; /* פדינג קטן יותר */
+    }
+  
+    .product-card {
+      width: 100%; /* הכרטיסים יתפסו את כל רוחב המסך */
+      max-width: 160px;  /* הגבלה למקסימום רוחב */
+      margin: 0 auto; /* מרכז את הכרטיסים */
+      margin-bottom: 20px;
+    }
+  
+    .btn-buy {
+      width: 100%;  /* כפתור "קנייה עכשיו" יתפוס את כל רוחב המסך */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .product-card h3 {
+      font-size: 1em;  /* גודל הכותרת קטן יותר */
+    }
+  
+    .product-price {
+      font-size: 16px;  /* גודל המחיר קטן יותר */
+    }
+  
+    .btn-buy {
+      font-size: 1.1em;  /* הגדלת הפונט של כפתור הקנייה */
+    }
+  }
+
+  #titleProducts{
+    margin-top: 45px;
+    margin-bottom: 20px;
+
+  }
+  
