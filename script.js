@@ -38,23 +38,7 @@ document.getElementById('clickToContinue').addEventListener('click', function() 
         images[currentIndex].classList.add('active'); // הוספת מחלקת "active" לתמונה החדשה
     }
 
-    setInterval(changeImage, 3000); // שינוי תמונה כל 3 שניות
-
-    // קוד להופעת הכפתור כאשר הגולל גולל למטה
-window.onscroll = function() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      scrollToTopBtn.style.display = "block"; // מציג את הכפתור כשהדף גולל
-    } else {
-      scrollToTopBtn.style.display = "none";  // hides the button when at the top of the page
-    }
-  };
-  
-  // קוד לחזרה למעלה בלחיצה על הכפתור
-  document.getElementById("scrollToTopBtn").onclick = function() {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // גולל בצורה חלקה למעלה
-    return false; // מונע את פעולת ה-link הרגילה
-  };
+    setInterval(changeImage, 2500); // שינוי תמונה כל 2.5 שניות
 
   document.getElementById('viewOurProducts').addEventListener('click', function() {
     // הפניה לדף אחר

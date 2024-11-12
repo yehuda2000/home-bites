@@ -63,7 +63,7 @@ body{
 
 #scroll-target {
     font-family: 'PatchedBold2', sans-serif;  /* השתמש בגופן */
-    margin-top: 80px; /* מציב את האלמנט למטה כדי לראות את הגלילה */
+    margin-top: 70px; /* מציב את האלמנט למטה כדי לראות את הגלילה */
     margin-bottom: 5px;
     padding: 2px;
     text-align: center;
@@ -109,6 +109,7 @@ h3{
     font-size: 13px;
     line-height: 24px;
     color: #894c15;
+    text-align: center;
 }
 .whatsapp-button {
     display: none;
@@ -143,23 +144,6 @@ h3{
     border: #1D2C1E,solid,2px;
     color: #ffffff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  }
-
-  .scroll-to-top {
-    position: fixed;
-    top: 20px;        /* מרחק מלמעלה */
-    right: 20px;      /* מרחק מימין */
-    color: white;
-    font-size: 30px;   /* גודל הפונט */
-    text-align: center;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    text-decoration: none;
-    display: none;  /* לא מוצג בהתחלה */
-    transition: transform 0.3s ease; /* אנימציות חלקות */
-  }
-  
-  .scroll-to-top:hover {
-    transform: scale(1.2); /* הגדלת הכפתור בזמן ריחוף */
   }
   
   /* עיצוב הכללי */
@@ -297,7 +281,7 @@ h3{
   }
 
   #titleProducts{
-    margin-top: 45px;
+    margin-top: 50px;
     margin-bottom: 20px;
 
   }
