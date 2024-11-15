@@ -1,3 +1,5 @@
+/* Numbers : ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ */
+
 @font-face {
     font-family: 'PatchedBold1';  /* שם הגופן */
     src: url('./fonts/PatchedBold1.otf') format('opentype');  /* נתיב הגופן */
@@ -168,10 +170,6 @@ h3{
     margin-bottom: 15px;
   }
   
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
   .product-card img {
     width: 100%;
     height: auto;
@@ -197,7 +195,6 @@ h3{
   }
   
   .product-price {
-    font-size: 0.8em;
     color: #28a745; 
     margin-top: -5px;
     margin-bottom: 10px;
@@ -206,7 +203,7 @@ h3{
   .old-price {
     position: relative;
     display: inline-block;
-    font-size: 13px; /* גודל טקסט מותאם */
+    font-size: 0.8rem; /* גודל טקסט מותאם */
     color: #999; /* צבע חיוור למחיר הישן */
   }
   
@@ -266,23 +263,134 @@ h3{
     }
   }
   
-  @media only screen and (max-width: 480px) {
-    .product-card h3 {
-      font-size: 1em;  /* גודל הכותרת קטן יותר */
-    }
-  
-    .product-price {
-      font-size: 16px;  /* גודל המחיר קטן יותר */
-    }
-  
-    .btn-buy {
-      font-size: 1.1em;  /* הגדלת הפונט של כפתור הקנייה */
-    }
-  }
-
   #titleProducts{
     margin-top: 50px;
     margin-bottom: 20px;
 
   }
   
+  /* כרטיס מורחב עם אפקטים חלקים */
+.expanded-card {
+  position: fixed;
+  top: 3%;  /* 3% רווח מלמעלה */
+  left: 4%; /* 4% רווח משמאל */
+  width: 92%;  /* 92% מתוך רוחב המסך (מתוך ה-100%) */
+  height: 94.5%; /* 94.5% מתוך גובה המסך */
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: auto; /* מאפשר גלילה אם התוכן יוצא מגבולות הכרטיס */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  opacity: 0; /* כרטיס מתחיל עם שקיפות */
+  transform: scale(0.9); /* כרטיס מתחיל בגודל קטן */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* אנימציה של שקיפות והתרחבות */
+}
+
+.expanded-card.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1); /* כשהכרטיס מופיע, הוא יתפשט לגודלו הרגיל */
+}
+
+/* תמונה בכרטיס */
+.expanded-card img {
+  width: 100%;
+  margin-top: 70px;
+  height: 35%;
+  object-fit: cover; /* לשמירה על פרופורציות התמונה */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* הצללה בחלק התחתון */
+}
+
+/* כותרת הכרטיס */
+#expandedTitle{
+  margin-top: 30px;
+  color: #894c15;
+  font-size: 1.2rem;
+}
+
+/* תיאור הכרטיס */
+#expandedDescription{
+  padding-inline: 5px;
+  line-height: 1.7rem;
+  margin-top: 0;
+  color: #666;
+}
+
+/* מחיר הכרטיס */
+#expandedPrice{
+  margin-top: 0;
+  color: #28a745;
+  font-size: 1.2rem;
+}
+
+/* כפתור סגירה */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* אוברליי מעומעם שמסביב לכרטיס */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);  /* צבע כהה עם שקיפות */
+  z-index: 1;
+  display: none;
+  opacity: 0; /* האוברליי מתחיל עם שקיפות */
+  transition: opacity 0.3s ease; /* אנימציה של שקיפות */
+}
+
+.overlay.show {
+  display: block;
+  opacity: 1; /* האוברליי יהפוך לגלוי */
+}
+
+
+.buttons2{
+  font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+  font-size: 15px;
+  border-radius: 50%;
+  padding: 2px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color:#BE8D58;
+  border: #ffffff00,solid,2px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* הצל */
+  transition: box-shadow 0.3s,transform 0.3s ease; /* אנימציות חלקות */; /* אנימציה רכה */
+}
+
+.buttons3{
+  font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+  font-size: 13px;
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  padding-top: 13px;
+  padding-bottom: 7px;
+  background-color:#BE8D58;
+  border: #ffffff00,solid,2px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* הצל */
+  transition: box-shadow 0.3s,transform 0.3s ease; /* אנימציות חלקות */; /* אנימציה רכה */
+}
+
+hr{
+  border: 0.1px rgb(133, 133, 133) solid;
+  width: 85%;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

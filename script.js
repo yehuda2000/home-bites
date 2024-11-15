@@ -44,3 +44,52 @@ document.getElementById('clickToContinue').addEventListener('click', function() 
     // הפניה לדף אחר
     window.location.href = 'products.html'; // הכנס כאן את הקישור לדף הרצוי
 });
+
+function openCard(cardId) {
+    // מציאת פרטי הכרטיס שנבחר
+    const card = document.getElementById(cardId);
+    const image = card.querySelector('img').src;
+    const title = card.querySelector('.product-title').textContent;
+    const description = card.querySelector('.product-description').textContent;
+    const price = card.querySelector('.product-price').innerHTML;
+    
+    // הצגת הכרטיסייה המורחבת עם התוכן המתאים
+    document.getElementById('expandedImage').src = image;
+    document.getElementById('expandedTitle').textContent = title;
+    document.getElementById('expandedDescription').textContent = description;
+    document.getElementById('expandedPrice').innerHTML = price;
+    
+    // מציגים את הכרטיסייה המורחבת
+    const expandedCard = document.getElementById('expandedCard');
+    expandedCard.style.display = 'flex';
+    setTimeout(() => {
+        expandedCard.classList.add('show'); // מוסיפים את מחלקת 'show' להפעיל את האנימציה
+    }, 10); // מוסיפים זמן קטן כדי להבטיח שהאנימציה תתבצע לאחר שה-display יהיה 'flex'
+    
+    // מציגים את האוברליי (רקע מעומעם)
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+    setTimeout(() => {
+        overlay.classList.add('show'); // מוסיפים את מחלקת 'show' לאוברליי
+    }, 10);
+}
+
+function closeCard() {
+    // הסרת מחלקת 'show' כדי להתחיל את האנימציה של סגירה
+    const expandedCard = document.getElementById('expandedCard');
+    expandedCard.classList.remove('show');
+
+    // מחכים לסיום האנימציה ואז מכבים את ה-display
+    setTimeout(() => {
+        expandedCard.style.display = 'none';
+    }, 500); // זמן שמחכה עד סיום האנימציה (500ms)
+    
+    // הסרת מחלקת 'show' מה-overlay
+    const overlay = document.getElementById('overlay');
+    overlay.classList.remove('show');
+    
+    // מחכים לסיום האנימציה ואז מכבים את ה-display
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 300); // זמן שמחכה עד סיום האנימציה של האוברליי (300ms)
+}
