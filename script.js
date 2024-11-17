@@ -1,4 +1,77 @@
-
+let productList = [
+    {   
+        id:'card1',
+        image:'./images/products/product1.webp',
+        name:'Yeast Cake (Nutella)',
+        description:'A rectangular yeast cake based on Nutella chocolate',
+        oldPrice:'20.00',
+        newPrice:'10.00',
+        amount:0
+    },
+    {   
+        id:'card2',
+        image:'./images/products/product2.jpg',
+        name:'Honey Cake',
+        description:'Rectangular and sweet honey cake',
+        oldPrice:'10.00',
+        newPrice:'5.00',
+        amount:0
+    },
+    {   
+        id:'card3',
+        image:'./images/products/product3.jpg',
+        name:'Chocolate chip cookies',
+        description:'7 medium chocolate chip cookies with milk',
+        oldPrice:'12.50',
+        newPrice:'7.00',
+        amount:0
+    },
+    {   
+        id:'card4',
+        image:'./images/products/product4.jpg',
+        name:'Alfajores cookies',
+        description:'5 large dairy alfahors cookies with milk jam filling',
+        oldPrice:'14.00',
+        newPrice:'6.00',
+        amount:0
+    },
+    {   
+        id:'card5',
+        image:'./images/products/product5.webp',
+        name:'Chocolate balls',
+        description:'10 small chocolate balls made of dark chocolate',
+        oldPrice:'11.50',
+        newPrice:'8.00',
+        amount:0
+    },
+    {   
+        id:'card6',
+        image:'./images/products/product6.webp',
+        name:'Vegetable fritters',
+        description:'10 Vegetarian large vegetable omelette',
+        oldPrice:'12.00',
+        newPrice:'7.00',
+        amount:0
+    },
+    {   
+        id:'card7',
+        image:'./images/products/product7.jpg',
+        name:'Big Buns',
+        description:'2 large buns with sesame',
+        oldPrice:'12.50',
+        newPrice:'7.00',
+        amount:0
+    },
+    {   
+        id:'card8',
+        image:'./images/products/product8.jpg',
+        name:'Garlic rolls',
+        description:'5 medium garlic rolls',
+        oldPrice:'9.50',
+        newPrice:'6.00',
+        amount:0
+    },
+]
 
 document.querySelector('.conversion').textContent = convertToSuperscript('2024');
 
