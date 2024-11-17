@@ -1,0 +1,101 @@
+/* Numbers : ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ */
+
+@font-face {
+    font-family: 'PatchedBold1';  /* שם הגופן */
+    src: url('../fonts/PatchedBold1.otf') format('opentype');  /* נתיב הגופן */
+    font-weight: bold;  /* משקל הגופן */
+    font-style: normal;  /* סגנון רגיל */
+}
+
+
+*{
+    font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+}
+
+body{
+    margin: 0;
+    height: 1000px;
+    background-color: #dbccad;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font-size: 20px;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 15px;
+    background-color:#BE8D58;
+    border: #1D2C1E solid 2px;
+    color: #1D2C1E;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* הצל */
+    transition: box-shadow 0.3s transform 0.3s ease; /* אנימציות חלקות */; /* אנימציה רכה */
+}
+
+.gallery {
+    margin-top: 20px;
+    position: relative;
+    width: 300px; /* גובה הגלריה */
+    height: 200px; /* רוחב הגלריה */
+    overflow: hidden; /* למנוע מהתמונות לחרוג */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+.gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* למלא את האלמנט בלי לעוות את התמונה */
+    opacity: 0; /* להתחיל עם שקיפות */
+    transition: opacity 1s ease; /* אנימציה לשינוי שקיפות */
+}
+
+.gallery img.active {
+    opacity: 1; /* הפוך את התמונה הפעילה לגלויה */
+}
+
+#scroll-target {
+    margin-top: 70px; /* מציב את האלמנט למטה כדי לראות את הגלילה */
+    margin-bottom: 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.number {
+    font-size: 12.5px;
+    position: relative;  /* חשוב להוסיף את זה */
+    top: 2.8px;  /* מיקום הספרות 2px למטה */
+}
+
+#description{
+    margin-top: 10px;
+    margin-inline: 38px;
+}
+
+h3{
+    font-size: 13px;
+    line-height: 24px;
+    color: #894c15;
+    text-align: center;
+}
+  
+  #clickToContinue{
+    margin-top: -25px;
+    margin-bottom: 300px;
+  }
+
+  #viewOurProducts{
+    margin-top: 10px;
+    background-color:#BE8D58;
+    border: #1D2C1E solid 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
