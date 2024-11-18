@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" href="./images/logos/full_logo.jpg">
     <title>Home Bites</title>
 </head>
-<body>     
+<body>
+    <button id="cartButton" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></button>
     <div class="container">
         <img id="titleProducts" src="./images/logos/title_logo.webp" width="100%" height="20%">
         <div id="productContainer"></div>
@@ -22,13 +23,13 @@
           <p id="expandedPrice"></p>
           <hr>
 
-          <div style="display: flex; flex-direction: row; gap: 20px; justify-content: center; width: 100%; margin-top: 10px;">
-            <button class="buttons2" style="flex: 0 0 10%; background-color: #808080;"><i class="fa-solid fa-minus"></i></button>
-            <input id="expandedAmount" type="number" style="flex: 0 0 20%; width: 20%; font-size: 15px; font-family: Arial, Helvetica, sans-serif; text-align: center;">
-            <button class="buttons2" style="flex: 0 0 10%; background-color: #b0b0b0;"><i class="fa-solid fa-plus"></i></button>
+          <div id="minusAndPlus">
+            <button id="minus"><i class="fa-solid fa-minus"></i></button>
+            <input id="expandedAmount" type="number">
+            <button id="plus"><i class="fa-solid fa-plus"></i></button>
           </div>
 
-          <div style="display: flex; flex-direction: row; gap: 10px; justify-content: center; width: 100%; margin-top: 20px;">
+          <div style="display: flex; flex-direction: row; gap: 10px; justify-content: center; width: 100%; margin-top: 25px;">
             <button style="background-color: #28a745;" class="buttons3">Buy now <i style="padding-left: 2px;" class="fa-solid fa-cash-register"></i></button>
             <button style="background-color: #007bff;" class="buttons3">Update the cart <i style="padding-left: 2px;" class="fa-solid fa-cart-shopping"></i></button>
           </div>        

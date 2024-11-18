@@ -93,7 +93,7 @@ function convertToSuperscript(input) {
     return input.split('').map(char => superscriptMap[char] || char).join('');
 }
 
-if (window.location.pathname === '/home-bites/'){
+if (window.location.pathname === '/home-bites/' || window.location.pathname === '/index.html' ){
 
     document.getElementById('clickToContinue').addEventListener('click', function() {
         // גלילה אל האלמנט עם class "scroll-target"
@@ -144,7 +144,7 @@ if (window.location.pathname === '/home-bites/'){
 
 }
 
-if (window.location.pathname === '/home-bites/products.html') {
+if (window.location.pathname === '/home-bites/products.html' || window.location.pathname === '/products.html') {
 
     // פונקציה ליצירת כרטיסים מתוך המידע במערך
 function createProductCards() {
@@ -247,8 +247,14 @@ createProductCards();
         setTimeout(() => {
             overlay.classList.add('show'); // מוסיפים את מחלקת 'show' לאוברליי
         }, 10);
-        
+
+        minus.setAttribute('onclick', `minus('${cardId}')`);
+
         document.getElementById('expandedAmount').value = productList.find(e=>e.id === cardId).amount
+
+        plus.setAttribute('onclick', `plus('${cardId}')`);
+
+        document.getElementById('minusAndPlus').append(minus,expandedAmount,plus)
     }
     
     function closeCard() {

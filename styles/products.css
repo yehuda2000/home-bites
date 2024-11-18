@@ -18,6 +18,25 @@ body{
   background-color: #dbccad;
 }
 
+.cart-button {
+  position: absolute;
+  top: 10px; /* המרחק מלמעלה */
+  left: 10px; /* המרחק משמאל */
+  width: 50px; /* רוחב הכפתור */
+  height: 50px; /* גובה הכפתור */
+  background-image: linear-gradient(45deg, #000000, #11290f, #35240c); /* גרדיאנט של חום */
+  color: white; /* צבע טקסט לבן */
+  font-size: 22px; /* גודל טקסט לאייקון */
+  border: none; /* אין גבול */
+  border-radius: 50%; /* כפתור עגלגל */
+  cursor: pointer; /* סמן כפתור */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* צללית לעומק */
+  transition: all 0.5s ease-in-out; /* אנימציה חלקה */
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -284,3 +303,41 @@ hr{
     text-align: center;
     font-size: 10px;
 }
+#minus, #plus ,#expandedAmount{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif; 
+  text-align: center;
+}
+
+#minus, #plus{
+  font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
+  font-size: 13px;
+  width: 30%;
+  padding: 10px;
+  border-radius:50%;
+  padding-top: 13px;
+  padding-bottom: 7px;
+  border: #ffffff00,solid,2px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* הצל */
+  transition: box-shadow 0.3s,transform 0.3s ease; /* אנימציות חלקות */; /* אנימציה רכה */
+}
+
+#minus {
+  background-color: #808080; /* צבע אפור לכפתור מינוס */
+ 
+}
+
+#plus {
+  background-color: #b0b0b0; /* צבע אפור כהה לכפתור פלוס */
+}
+
+#minusAndPlus {
+  display: flex; 
+  flex-direction: row; /* סידור האובייקטים בשורה */
+  gap: 20px; /* רווח בין האובייקטים */
+  justify-content: center; /* למרכז את האובייקטים */
+  margin-top: 10px;
+}
+
