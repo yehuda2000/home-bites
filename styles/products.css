@@ -20,10 +20,11 @@ body{
 
 .cart-button {
   position: absolute;
+  padding-top: 3.5px;
   top: 10px; /* המרחק מלמעלה */
   left: 10px; /* המרחק משמאל */
-  width: 50px; /* רוחב הכפתור */
-  height: 50px; /* גובה הכפתור */
+  width: 55px; /* רוחב הכפתור */
+  height: 55px; /* גובה הכפתור */
   background-image: linear-gradient(45deg, #000000, #11290f, #35240c); /* גרדיאנט של חום */
   color: white; /* צבע טקסט לבן */
   font-size: 22px; /* גודל טקסט לאייקון */
@@ -53,10 +54,12 @@ body{
 .number1 {
     font-size: 20px;
     position: relative;  /* חשוב להוסיף את זה */
+    left: 1px;
     top: 5px;  /* מיקום הספרות 2px למטה */
 }
 
 .number2 {
+  left: 1px;
     font-size: 17px;
     position: relative;  /* חשוב להוסיף את זה */
     top: 4px;  /* מיקום הספרות 2px למטה */
@@ -165,8 +168,8 @@ body{
   }
   
   #titleProducts{
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 65px;
+    margin-bottom: 10px;
 
   }
   
@@ -275,7 +278,7 @@ body{
 
 .buttons3{
   font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
-  font-size: 13px;
+  font-size: 12px;
   width: 45%;
   padding: 10px;
   border-radius: 10px;
@@ -309,10 +312,13 @@ hr{
   text-align: center;
 }
 
+#expandedAmount{
+  width: 20%;
+}
+
 #minus, #plus{
   font-family: 'PatchedBold1', sans-serif;  /* השתמש בגופן */
-  font-size: 13px;
-  width: 30%;
+  font-size: 12px;
   padding: 10px;
   border-radius:50%;
   padding-top: 13px;
@@ -336,6 +342,7 @@ hr{
 #minusAndPlus {
   display: flex; 
   flex-direction: row; /* סידור האובייקטים בשורה */
+  width: 70%;
   gap: 20px; /* רווח בין האובייקטים */
   justify-content: center; /* למרכז את האובייקטים */
   margin-top: 10px;
